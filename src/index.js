@@ -1,5 +1,3 @@
-const _ = require('lodash')
-
 module.exports = app => {
   app.on('pull_request.review_requested', async context => {
     const { requested_reviewers } = context.payload.pull_request
@@ -12,7 +10,7 @@ module.exports = app => {
 
     const reviewsToDismiss = []
 
-    _.forEach(requested_reviewers, reviewRequest => {
+    requested_reviewers.forEach(reviewRequest => {
       const userId = reviewRequest.id
 
       reviews
