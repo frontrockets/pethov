@@ -1,0 +1,58 @@
+{
+  "name": "@frontrockets/pethov",
+  "version": "0.0.1",
+  "description": "Automate github work",
+  "author": "Eugene Zhlobo <ezhlobo@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/@frontrockets/pethov.git",
+  "homepage": "https://github.com/@frontrockets/pethov",
+  "bugs": "https://github.com/@frontrockets/pethov/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "start": "probot run ./src/index.js",
+    "lint": "prettier --check './src/**/*.js'",
+    "test": "jest"
+  },
+  "probot": {
+    "apps": [
+      "probot-delete-merged-branch"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "probot": "9.2.15",
+    "probot-delete-merged-branch": "https://github.com/ezhlobo/delete-merged-branch#upgrade-probot",
+    "probot-serverless-now": "^2.1.0"
+  },
+  "devDependencies": {
+    "jest": "^24.0.0",
+    "lodash": "^4.17.11",
+    "nock": "^10.0.0",
+    "nodemon": "^1.17.2",
+    "prettier": "^1.18.2",
+    "smee-client": "^1.0.2"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}
