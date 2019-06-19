@@ -18,11 +18,6 @@
     "lint": "prettier --check './src/**/*.js'",
     "test": "jest"
   },
-  "probot": {
-    "apps": [
-      "probot-delete-merged-branch"
-    ]
-  },
   "dependencies": {
     "axios": "^0.19.0",
     "probot": "9.2.15",

@@ -1,3 +1,5 @@
+const deleteMergedBranch = require('probot-delete-merged-branch/lib/delete-merged-branch')
+
 module.exports = app => {
   app.on('pull_request.review_requested', async context => {
     const { requested_reviewers } = context.payload.pull_request
@@ -32,4 +34,6 @@ module.exports = app => {
       ),
     )
   })
+
+  app.on('pull_request.closed', deleteMergedBranch)
 }
