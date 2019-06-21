@@ -18,6 +18,7 @@ module.exports = app => {
       reviews
         .filter(review => review.user.id === userId)
         .filter(review => review.state !== 'DISMISSED')
+        .filter(review => review.state !== 'COMMENTED')
         .forEach(review => {
           reviewsToDismiss.push(review.id)
         })
