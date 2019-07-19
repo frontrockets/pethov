@@ -1,15 +1,10 @@
 {
-  "action": "review_requested",
+  "action": "opened",
   "pull_request": {
     "number": 100,
-    "requested_reviewers": [
-      {
-        "id": 201
-      },
-      {
-        "id": 202
-      }
-    ]
+    "user": {
+      "login": "author-login"
+    }
   },
 
   "repository": {
