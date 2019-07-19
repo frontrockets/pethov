@@ -36,5 +36,7 @@ describe('when pull request closed', () => {
     github.delete(/^\/repos\/owner\/repository\/git\/refs\/heads\//).reply(200)
 
     await probot.receive({ name: 'pull_request', payload })
+
+    github.done()
   })
 })
