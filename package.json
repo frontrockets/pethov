@@ -19,7 +19,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "probot": "9.2.19",
     "probot-delete-merged-branch": "https://github.com/SvanBoxel/delete-merged-branch",
     "probot-serverless-now": "^2.1.1"
